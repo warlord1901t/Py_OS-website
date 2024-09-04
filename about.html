@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyOS | About</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("https://i.ibb.co/6b79yGm/290c52348a3d2d95c96e0ed0c81aad02.jpg");
+            color: #ccc;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Header {
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            width: 100vw;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .Header img {
+            margin-left: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .Header h1 {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: black;
+        }
+
+        .Header button {
+            padding: 10px;
+            font-size: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: black;
+            margin-right: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .Header button:hover {
+            color: red;
+        }
+
+        .navigation {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 85%;
+            background-color: black;
+            border: 1px solid black;
+            display: none;
+            padding: 0 10px;
+        }
+
+        .NAV_TEST {
+            font-family: 'Roboto', sans-serif;
+            margin-top:10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navigation ul {
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .navigation li {
+            font-family: 'Roboto', sans-serif;
+            margin-top:40px;
+            margin-bottom: 40px;
+            padding: 15px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .navigation a{
+            font-family: 'Roboto', sans-serif;
+            margin-top:30px;
+            margin-bottom: 20px;
+            font-size: 30px;
+            font-style: bold;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            width:max-content;
+            height:50px;
+        }
+
+        .navigation a:hover {
+            color: black;
+            font-size: 35px;
+            border: 1px solid white;
+            background-color: grey;
+            opacity: 95%;
+            border-radius:15px;
+
+        }
+
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .section {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .section h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .section p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        .section a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .section a:hover {
+            color: #ff3d3d;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer-title {
+            font-size: 75px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px red;
+        }
+
+        .footer-nav {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: red;
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            border: none;
+            margin: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .separator {
+            width: 2px;
+            height: 150px;
+            background-color: white;
+        }
+
+        .footer-info {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 30px;
+            text-align: left;
+            font-size: 20px;
+        }
+
+        .footer-info h3{
+            font-size: 25px;
+        }
+
+        .footer-info p {
+            margin: 10px 0;
+        }
+
+        .footer-info a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-info a:hover {
+            color: red;
+        }
+
+        .footer-bottom-divider {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            border: none;
+            margin: 20px 0;
+        }
+
+        .footer-copy {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function toggleNav() {
+            var nav = document.querySelector('.navigation');
+            var buttont = document.querySelector('.Header button');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+                buttont.innerText = '☰';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.alignItems = 'center';
+                buttont.innerText = 'X';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="Header">
+        <img src="https://i.ibb.co/5kz5TZR/Picsart-24-07-30-20-36-38-433.png" alt="logo">
+        <h1>PyOS</h1>
+        <button onclick="toggleNav()">☰</button>
+    </header>
+    <nav class="navigation">
+        <ul>
+            <li class="NAV_TEST"><a href="index.html">Home</a></li>
+            <li class="NAV_TEST"><a href="about.html">About</a></li>
+                <li class="NAV_TEST"><a href="installation.html">Installation</a></li>
+            <li class="NAV_TEST"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h2>About PyOS</h2>
+
+        <div class="section">
+            <h3 id="who">Who We Are</h3>
+            <p>
+                PyOS is an educational project designed to simulate a basic operating system environment using Python’s Tkinter library. Our project provides a unique platform for learning and experimenting with core operating system functionalities and graphical user interface design. Whether you're a student, developer, or simply a curious learner, PyOS offers a hands-on experience that bridges the gap between theoretical knowledge and practical application.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3 id="vis">Our Vision</h3>
+            <p>
+                At PyOS, we believe that understanding the principles behind operating systems and GUIs is crucial for anyone interested in technology. By offering a simplified yet functional simulation, we aim to demystify these concepts and make them accessible to a wider audience. Our vision is to foster a learning environment where users can explore, experiment, and grow their skills in a supportive and interactive setting.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3 id="what">What We Offer</h3>
+            <p>
+                - <strong>Educational Experience:</strong> PyOS is more than just a simulation; it’s a learning tool designed to help users grasp fundamental concepts of operating systems and graphical interfaces. Through our intuitive and interactive environment, users can gain hands-on experience with file management, application handling, and system customization.
+                <br><br>
+                - <strong>User-Friendly Interface:</strong> Our simulation features a user-friendly graphical interface that mirrors the look and feel of real operating systems. With easy navigation and interactive elements, users can comfortably explore the various aspects of PyOS and develop their understanding of GUI design.
+                <br><br>
+                - <strong>Customization and Flexibility:</strong> We offer a range of customization options, allowing users to tailor their simulated environment to their preferences. From changing background colors to adjusting window opacity, PyOS lets users experiment with different settings to enhance their learning experience.
+                <br><br>
+                - <strong>Community and Support:</strong> At PyOS, we are committed to supporting our users through their learning journey. We provide resources, documentation, and a community forum where users can ask questions, share insights, and connect with others interested in OS design and GUI development.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3>Our Goals</h3>
+            <p>
+                Our primary goal with PyOS is to provide an engaging and educational tool that helps users understand the inner workings of operating systems and graphical user interfaces. We strive to create a platform where learners can gain practical experience, build their skills, and lay the foundation for future projects in software development and system design.
+            </p>
+        </div>
+
+        <div class="section">
+            <h3 id="get">Get Involved</h3>
+            <p>
+                We welcome contributions, feedback, and discussions from our community. If you’re interested in learning more, experimenting with PyOS, or contributing to its development, we invite you to join us. You can get involved by exploring our <a href="https://github.com/warlord1901t/Py_OS/discussions" target="_blank">GitHub Discussions</a> page, where you can participate in conversations, share your ideas, and connect with other enthusiasts. Together, we can advance our understanding and make the most of this educational experience.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <h2 class="footer-title">PyOS</h2>
+        <hr class="footer-divider">
+        <nav class="footer-nav">
+            <a href="index.html">▶ Home</a>
+            <a href="about.html">▶ About Us</a>
+            <a href="installation.html">▶ Installation</a>
+            <a href="contact.html">▶ Contact Us</a>
+        </nav>
+        <hr class="footer-divider">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://i.ibb.co/5kz5TZR/Picsart-24-07-30-20-36-38-433.png" alt="Logo">
+            </div>
+            <div class="separator"></div>
+            <h2><b><u>Table of contents: </u></b></h2><br>
+            <div class="footer-info">
+                <p><a href="#who">▶ Who We Are</a></p>
+                <p><a href="#vis">▶ Our Vision</a></p>
+                <p><a href="#what">▶ What We Offer</a></p>
+                <p><a href="#get">▶ Get Involved</a></p>
+            </div>
+        </div>
+        <hr class="footer-bottom-divider">
+        <p class="footer-copy">&copy; 2024 PyOS. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

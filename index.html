@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PyOS | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            background-image: url("https://i.ibb.co/6b79yGm/290c52348a3d2d95c96e0ed0c81aad02.jpg");
+            box-sizing: border-box;
+            max-width: 100%;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        .Header {
+            background-color: white;
+            border: 1px solid black;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            width: 100vw;
+            position: relative;
+
+        }
+
+        .Header img {
+            margin-left: 10px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .Header h1 {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: black;
+            margin-top: 2px;
+            margin-bottom: 2px;
+        }
+
+        .Header button {
+            padding: 10px;
+            font-size: 18px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: black;
+            margin-right: 20px;
+        }
+
+        .navigation {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            opacity: 85%;
+            background-color: black;
+            border: 1px solid black;
+            display: none;
+            padding: 0 10px;
+        }
+
+        .NAV_TEST {
+            font-family: 'Roboto', sans-serif;
+            margin-top:10px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navigation ul {
+            text-align: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .navigation li {
+            font-family: 'Roboto', sans-serif;
+            margin-top:40px;
+            margin-bottom: 40px;
+            padding: 15px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+        }
+        .navigation a{
+            font-family: 'Roboto', sans-serif;
+            margin-top:30px;
+            margin-bottom: 20px;
+            font-size: 30px;
+            font-style: bold;
+            padding: 15px;
+            color: white;
+            text-decoration: none;
+            width:max-content;
+            height:50px;
+        }
+
+        .navigation a:hover {
+            color: red;
+            font-size: 35px;
+            border: 1px solid red;
+            background-color: white;
+            opacity: 95%;
+            border-radius:15px;
+            
+        }
+
+        .whatisPyOs {
+            text-align: center;
+            padding: 50px;
+            background-color: black;
+            width: 100vw;
+            overflow: hidden;
+            background-image: url("https://i.ibb.co/7V00Bq0/image.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .whatisPyOs h2 {
+            margin-top: 50px;
+            font-size: 48px;
+            text-align: left;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px red;
+        }
+
+        .name {
+            color: red;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        .whatisPyOs p {
+            margin-top: 20px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.35);
+            color: white;
+            font-family: Verdana sans-serif;
+            font-size: 22px;
+            text-align: left;
+            margin: 5px;
+        }
+
+        .exp {
+            background-color: white;
+            color: black;
+            width: 100vw;
+            font-family: Verdana sans-serif;
+            padding: 5%;
+            font-size: 18px;
+            height: max-content;
+            background-image: url("https://i.ibb.co/W3vXHsX/images-5.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .exp h2 {
+            color: black;
+            font-style: bold;
+            font-size: 48px;
+            padding: 5px;
+            margin-top: 5px;
+            margin-left: 10px;
+            border-bottom: 5px solid darkorange;
+        }
+
+        .exp a {
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .btx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: max-content;
+        }
+
+        .btx button {
+            margin-top: 50px;
+            ;
+            margin-bottom: 15px;
+            background-color: red;
+            color: white;
+            width: max-content;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            vertical-align: middle;
+            font-size: 18px;
+            font-style: bold;
+            cursor: pointer;
+            outline: 1px solid black;
+        }
+
+        .boxes {
+            margin-top: 5%;
+            margin-bottom: 50px;
+        }
+
+        .boxestop {
+            background-color: white;
+            color: black;
+            font-family: Verdana sans-serif;
+            font-size: 18px;
+            margin: 5px;
+            width: 30%;
+            height: max-content;
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        .boxestop h3 {
+            color: black;
+            font-style: bold;
+            font-size: 35px;
+            padding: 5px;
+            margin: 2px;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .boxestop p {
+            color: #424242;
+            font-size: 18px;
+            padding: 5px;
+            margin: 2px;
+            text-align: left;
+            margin-left: 10px;
+            margin-bottom: 30px;
+        }
+
+        .boxestop button {
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            margin: 10px;
+            text-align: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+            vertical-align: middle;
+            border-radius: 50px;
+        }
+
+        .feat {
+            background-color: white;
+            color: black;
+            font-family: Verdana sans-serif;
+            font-size: 18px;
+            width: 100vw;
+            height: max-content;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        .feat h2 {
+            margin-top: 10px;
+            padding: 5px;
+            vertical-align: middle;
+            font-size: 48px;
+            margin-bottom: 20px;
+            width: 100%;
+            border-bottom: 3px solid red;
+        }
+
+        .feat h3 {
+            margin-top: 10px;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .feat p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .feature-box {
+            justify-content: center;
+        }
+
+        .feature-box h3 {
+            font-style: bold;
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .feature-box p {
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+
+        .Authors {
+            background-color: white;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        .card-container {
+            background-color: white;
+            perspective: 1000px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+        }
+
+        .card:hover {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: white;
+            border: 1px solid black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .card-front {
+            background: #fff;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .card-back {
+            background: #f1f1f1;
+            transform: rotateY(180deg);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            box-sizing: border-box;
+            border-radius: 10px;
+        }
+
+        .card-back h3 {
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .card-back p {
+            color: #333;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .Author_div {
+            width: 100%;
+            background-color: white;
+            height: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        .Author_div h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 42px;
+            color: black;
+            text-align: center;
+            border-bottom: 4px solid #e74c3c;
+            width: max-content;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer-title {
+            font-size: 75px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px red;
+        }
+
+        .footer-nav {
+            margin-bottom: 20px;
+            font-size: 25px;
+        }
+
+        .footer-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-nav a:hover {
+            color: red;
+        }
+
+        .footer-divider {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            border: none;
+            margin: 20px 0;
+        }
+
+        .footer-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-logo img {
+            width: 150px;
+            height: auto;
+        }
+
+        .separator {
+            width: 2px;
+            height: 150px;
+            background-color: white;
+        }
+
+        .footer-info {
+            font-size: 18px;
+            font-weight: bold;
+            margin-left: 30px;
+            text-align: left;
+            font-size: 20px;
+        }
+        
+        .footer-info h3{
+            font-size: 25px;
+        }
+
+        .footer-info p {
+            margin: 10px 0;
+        }
+
+        .footer-info a {
+            color: white;
+            text-decoration: none;
+            padding: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-info a:hover {
+            color: red;
+        }
+
+        .footer-bottom-divider {
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            border: none;
+            margin: 20px 0;
+        }
+
+        .footer-copy {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <style>
+        .lobster-regular {
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
+    <script>
+        function toggleNav() {
+            var nav = document.querySelector('.navigation');
+            var buttont = document.querySelector('.Header button');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+                buttont.innerText = '☰';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.alignItems = 'center';
+                buttont.innerText = 'X';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="Header">
+        <img src="https://i.ibb.co/5kz5TZR/Picsart-24-07-30-20-36-38-433.png" alt="logo">	</img>
+        <h1>PyOS</h1>
+        <button onclick="toggleNav()">☰</button>
+    </header>
+    <nav class="navigation">
+        <ul>
+            <li class="NAV_TEST"><a href="index.html">Home</a></li>
+            <li class="NAV_TEST"><a href="about.html">About</a></li>
+            <li class="NAV_TEST"><a href="installation.html">Installation</a></li>
+            <li class="NAV_TEST"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="whatisPyOs">
+        <div class="jstimg">
+            
+        <br>
+        <p style="margin-bottom: 100px; opacity: 0%;"></p>
+        <h2 id="what">What is <span class="name"><b>PyOS</b></span>?</h2><br>
+        <p>
+            Welcome to the world of <b> PyOS</b>, a groundbreaking operating system simulation meticulously crafted in
+            Python!<br>
+            Imagine a learning tool that blends the simplicity of Python with dynamic, interactive environment of modern
+            operating system - this is exactly what PyOS offers.Designed both for educational purposes and as a
+            springboard into fascinating realm of GUI development, PyOS is a testament to the power of Python and its
+            versatility in creating dynamic and interactive applications.
+        </p>
+        </div>
+    </section>
+
+    <section class="exp">
+        <h2 id="Top">Why <span class="name">PyOS</span>?</h2>
+        <section class="boxes">
+            <div class="boxestop" style="margin-left:235px;float:left;">
+                <h3>Educational <br>Powerhouse</h3>
+                <p><b>PyOS</b> demystifies operating system with hands-on learning.</p>
+                <a href="Why PYOS.html#edP"><button> Read More → </button></a>
+            </div>
+
+            <div class="boxestop" style="float:right; margin-right:235px;">
+                <h3>Pythonic <br>Simplicity</h3>
+                <p>Accessible for beginners, challenging to seasonal developers.</p>
+                <a href="Why PYOS.html#PS"><button> Read More → </button></a>
+            </div>
+
+            <div class="boxestop" style="margin-left:235px;float:left;">
+                <h3>Interactive <br>Learning</h3>
+                <p>Concepts come to life in a practical, engaging environment.</p>
+                <a href="Why PYOS.html#IL"><button> Read More → </button></a>
+            </div>
+
+            <div class="boxestop" style="float:right; margin-right:235px;">
+                <h3>User-Friendly <br>GUI</h3>
+                <p>Sleek, modern interface mimicking popular OS environments.</p>
+                <a href="Why PYOS.html#GUI"><button> Read More → </button></a>
+            </div>
+        </section>
+        <br />
+        <br />
+        <br />
+        <div class="btx">
+            <a href="Why PYOS.html"><button><b>Learn More → </b></button></a>
+        </div>
+    </section>
+
+    <section class="feat">
+
+        <h2 id="features" style="padding-bottom:15px;"><span style="color:black">Key Features</span></h2>
+        <div class="feature-box">
+            <br>
+            <br>
+            <span class="material-symbols-outlined" style="font-size: 50px;">
+                folder_open
+            </span><br>
+            <h3><b></b>File Management</b></h3>
+            <p>Explore and manage files and folders with a basic file manager.</p>
+        </div>
+        <br>
+        <br>
+        <span class="material-symbols-outlined" style="font-size: 50px;">
+            app_registration
+        </span><br>
+        <h3><b></b>Application Management</b></h3>
+        <p>Download, install and open applications through the software store.</p>
+        </div>
+        <br>
+        <br>
+        <span class="material-symbols-outlined" style="font-size: 50px;">
+            familiar_face_and_zone
+        </span>
+        <br>
+        <h3><b></b>User Interface (UI)</b></h3>
+        <p>A graphical user interface with buttons, frames and drag-and-drop funtionality.</p>
+        </div>
+        <br>
+        <br>
+        <span class="material-symbols-outlined" style="font-size: 50px;">
+            tune
+        </span>
+        <br>
+        <h3><b></b>Settings and Customization</b></h3>
+        <p>Customize the background color and window opacity according to your prefernces.</p>
+        </div>
+        <br>
+        <br>
+        <span class="material-symbols-outlined" style="font-size: 50px;">
+            notifications
+        </span>
+        <br>
+        <h3><b></b>Notification and Navigation</b></h3>
+        <p>Receive notifications and navigate through the simulated operating system.</p>
+        </div>
+        <br>
+        <br>
+
+    </section>
+
+
+    <section class="Authors">
+        <div class="Author_div">
+            <div class="Author_div">
+                <h2 id="authors">Developers</h2>
+            </div>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-face card-front">
+                    <img src="https://i.ibb.co/RgGRnfp/IMG-20240811-WA0003.jpg.jpg" alt="Faiz Sayyed"
+                        style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card-face card-back">
+                    <h3>Faiz Sayyed</h3>
+                    <p>Faiz Sayyed contributed to Py_OS by refining the color scheme and helping shape core ideas,
+                        enhancing its visual appearance and user experience. He is also an active member of various
+                        committees like FACC, GMCC at Royal College, Mira Road (E). He is also a skilled video editor.
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-face card-front">
+                    <img src="https://i.ibb.co/z7wskwV/images-7.jpg" alt="Yatin Anchan"
+                        style="width:100%; height:100%; object-fit: cover;">
+                </div>
+                <div class="card-face card-back">
+                    <h3>Yatin Anchan</h3>
+                    <p>Yatin Anchan contributed to Py_OS, a Python-based OS simulation built using Tkinter GUI module.
+                        He is also an active NCC member and a part of the Anti-Ragging cell at Royal College, Mira Road.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br><br>
+    </section>
+    
+    <footer>
+        <h2 class="footer-title">PyOS</h2>
+        <hr class="footer-divider">
+        <nav class="footer-nav">
+            <a href="index.html">▶ Home</a>
+            <a href="about.html">▶ About Us</a>
+            <a href="installation.html">▶ Installation</a>
+            <a href="contact.html">▶ Developers</a>
+        </nav>
+        <hr class="footer-divider">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="https://i.ibb.co/5kz5TZR/Picsart-24-07-30-20-36-38-433.png" alt="Logo">
+            </div>
+            <div class="separator"></div>
+            <h2><b><u>Table of contents: </u></b></h2><br>
+            <div class="footer-info">
+                <p><a href="#what">▶ What PyOS?</a></p>
+                <p><a href="#Top">▶ Why PyOS?</a></p>
+                <p><a href="#features">▶ Key Features</a></p>
+                <p><a href="#authors">▶ Developers</a></p>
+            </div>
+        </div>
+        <hr class="footer-bottom-divider">
+        <p class="footer-copy">&copy; 2024 PyOS. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
